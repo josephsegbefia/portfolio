@@ -18,7 +18,13 @@ module.exports = autoCatch({
 
 // Project Controllers
 async function createProject(req, res, next) {
-  const project = await Projects.create(req.body);
+  const { projectName, description, techs } = req.body;
+  const project = await Projects.create({
+    projectName,
+    description,
+    techs
+    // imageUrl: req.file.path This will only work from the front end when a file is uploaded. Do this when you build the frontend
+  });
   res.json(project);
 }
 async function getProject(req, res, next) {

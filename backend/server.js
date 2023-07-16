@@ -2,7 +2,9 @@ const express = require("express");
 const api = require("./api");
 const middleware = require("./middleware");
 const bodyParser = require("body-parser");
+require("dotenv").config();
 
+const fileUploader = require("./config/cloudinary.config");
 const port = process.env.PORT || 1337;
 
 const app = express();
@@ -12,7 +14,11 @@ app.use(bodyParser.json());
 
 app.get("/projects", api.listProjects);
 app.get("/projects/:id", api.getProject);
-app.post("/projects", api.createProject);
+app.post(
+  "/projects",
+  fileUploader.single("project-cover-image"),
+  api.createProject
+);
 app.put("/projects/:id", api.editProject);
 app.delete("projects/:id", api.deleteProject);
 
