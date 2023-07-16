@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "projectName": "E-commerce Website",
+    "description": "A fully functional e-commerce website with advanced search and secure payment integration.",
+    "techUsed": ["React", "Node.js", "MongoDB", "Express.js"],
+    "dateCreated": "2021-08-10",
+    "imageUrl": "https://example.com/ecommerce.png"
+  },
+  {
+    "id": 2,
+    "projectName": "Weather App",
+    "description": "A weather application that provides real-time weather information based on user's location.",
+    "techUsed": ["React", "OpenWeatherMap API"],
+    "dateCreated": "2020-12-05",
+    "imageUrl": "https://example.com/weather-app.png"
+  },
+  {
+    "id": 3,
+    "projectName": "Task Management System",
+    "description": "A web-based application for managing tasks, deadlines, and team collaboration.",
+    "techUsed": ["Vue.js", "Firebase", "Vuetify"],
+    "dateCreated": "2021-02-20",
+    "imageUrl": "https://example.com/task-manager.png"
+  },
+  {
+    "id": 4,
+    "projectName": "Recipe Sharing Platform",
+    "description": "A platform where users can share and discover recipes, rate them, and leave comments.",
+    "techUsed": ["Ruby on Rails", "PostgreSQL", "Bootstrap"],
+    "dateCreated": "2021-06-15",
+    "imageUrl": "https://example.com/recipe-platform.png"
+  },
+  {
+    "id": 5,
+    "projectName": "Portfolio Website",
+    "description": "Personal portfolio website showcasing my skills, projects, and achievements.",
+    "techUsed": ["HTML", "CSS", "JavaScript"],
+    "dateCreated": "2022-01-10",
+    "imageUrl": "https://example.com/portfolio.png"
+  },
+  {
+    "id": 6,
+    "projectName": "Social Networking App",
+    "description": "A mobile app with features like user profiles, feeds, likes, comments, and notifications.",
+    "techUsed": ["React Native", "Firebase", "Expo"],
+    "dateCreated": "2021-09-25",
+    "imageUrl": "https://example.com/social-app.png"
+  },
+  {
+    "id": 7,
+    "projectName": "Stock Market Analysis",
+    "description": "A data-driven application for analyzing stock market trends and making informed investment decisions.",
+    "techUsed": ["Python", "Pandas", "Plotly", "SQLite"],
+    "dateCreated": "2021-03-18",
+    "imageUrl": "https://example.com/stock-analysis.png"
+  },
+  {
+    "id": 8,
+    "projectName": "Blog Platform",
+    "description": "A platform for publishing blog posts, managing categories, and engaging with readers.",
+    "techUsed": ["Django", "MySQL", "Bootstrap"],
+    "dateCreated": "2021-07-03",
+    "imageUrl": "https://example.com/blog-platform.png"
+  },
+  {
+    "id": 9,
+    "projectName": "Job Search Application",
+    "description": "An application that allows users to search and apply for job openings in various industries.",
+    "techUsed": ["Angular", "Java", "Spring Boot", "MySQL"],
+    "dateCreated": "2022-02-12",
+    "imageUrl": "https://example.com/job-search.png"
+  },
+  {
+    "id": 10,
+    "projectName": "Event Booking System",
+    "description": "A web-based system for managing event bookings, ticket sales, and attendee registrations.",
+    "techUsed": ["ASP.NET", "C#", "MSSQL", "Entity Framework"],
+    "dateCreated": "2021-11-08",
+    "imageUrl": "https://example.com/event-booking.png"
+  }
+]
