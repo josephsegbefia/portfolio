@@ -2,13 +2,16 @@ module.exports = {
   cors,
   handleError,
   notFound,
-  queryCaseInsensitive
+  handleValidationError
 };
 
 function handleError(err, req, res, next) {
   console.error(err);
   if (res.headersSent) return next(err);
-  res.status(500).json({ error: "Internal Error" });
+
+  const statusCode = err.statusCode || 500;
+  const errorMessage = STATUS_CODES[statusCode] || "Internal Error";
+  res.status(statusCode).json({ error: errorMessage });
 }
 
 function notFound(req, res) {
@@ -32,10 +35,8 @@ function cors(req, res, next) {
 
   next();
 }
-// Make req.query case insentitive
-function queryCaseInsensitive(req, res, next) {
-  for (var key in req.query) {
-    req.query[key.toLowerCase()] = req.query[key];
-  }
-  next();
+function handleValidationError(err, req, res, next) {
+  if (err.name !== "ValidationError") return next(err);
+
+  res.status(400).json({ error: err._message, errorDetails: err.errors });
 }
