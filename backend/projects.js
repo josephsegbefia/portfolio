@@ -13,13 +13,26 @@ function urlSchema(opts = {}) {
     }
   };
 }
-const Project = db.model("Project", {
-  _id: { type: String, default: cuid },
-  projectName: { type: String, required: true },
-  description: { type: String, required: true },
-  techs: { type: [String], index: true },
-  imageUrl: urlSchema()
-});
+// const Project = db.model("Project", {
+//   _id: { type: String, default: cuid },
+//   projectName: { type: String, required: true },
+//   description: { type: String, required: true },
+//   techs: { type: [String], index: true },
+//   imageUrl: urlSchema()
+// });
+
+const ProjectSchema = new db.Schema(
+  {
+    _id: { type: String, default: cuid },
+    projectName: { type: String, required: true },
+    description: { type: String, required: true },
+    techs: { type: [String], index: true },
+    imageUrl: urlSchema()
+  },
+  { timestamps: true } // Add the timestamps option here
+);
+
+const Project = db.model("Project", ProjectSchema);
 module.exports = {
   get,
   list,

@@ -14,12 +14,24 @@ function emailSchema(opts = {}) {
   };
 }
 
-const Message = db.model("Message", {
-  _id: { type: String, default: cuid },
-  name: { type: String, required: true },
-  email: emailSchema(),
-  message: { type: String, required: true }
-});
+// const Message = db.model("Message", {
+//   _id: { type: String, default: cuid },
+//   name: { type: String, required: true },
+//   email: emailSchema(),
+//   message: { type: String, required: true }
+// });
+
+const MessageSchema = new db.Schema(
+  {
+    _id: { type: String, default: cuid },
+    name: { type: String, required: true },
+    email: emailSchema(),
+    message: { type: String, required: true }
+  },
+  { timestamps: true } // Add the timestamps option here
+);
+
+const Message = db.model("Message", MessageSchema);
 
 module.exports = {
   get,
