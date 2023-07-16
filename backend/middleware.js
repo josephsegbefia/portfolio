@@ -10,7 +10,7 @@ function handleError(err, req, res, next) {
   if (res.headersSent) return next(err);
 
   const statusCode = err.statusCode || 500;
-  const errorMessage = STATUS_CODES[statusCode] || "Internal Error";
+  const errorMessage = "Internal Error";
   res.status(statusCode).json({ error: errorMessage });
 }
 
