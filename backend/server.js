@@ -17,6 +17,10 @@ app.use(cookieParser());
 
 // Auth & Login Routes
 app.post("/login", auth.authenticate, auth.login);
+app.get("/logout", async (req, res) => {
+  res.cookie("jwt", "", { maxAge: 1 });
+  res.redirect("/projects");
+});
 
 // Project Routes
 app.get("/projects", api.listProjects);
